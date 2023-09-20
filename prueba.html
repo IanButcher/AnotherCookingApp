@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cambio de Color de Fondo</title>
+
+</head>
+<body>
+    <button id="cambiar-color" onclick="cambiarColor()">Cambiar Color</button>
+    <script>
+        // Definimos un array con colores pastel
+        var colores = ["#FFD700", "#FFA07A", "#87CEEB", "#98FB98"];
+        var indiceColor = 0;
+
+        // Función para cambiar el color de fondo
+        function cambiarColor() {
+            document.body.style.backgroundColor = colores[indiceColor];
+            document.getElementById("cambiar-color").style.backgroundColor = colores[indiceColor];
+            indiceColor = (indiceColor + 1) % colores.length;
+        }
+    </script>
+</body>
+</html>
